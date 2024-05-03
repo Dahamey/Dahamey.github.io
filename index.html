@@ -11,6 +11,76 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		 <!-- Add the style for increasing font size -->
+		 <style>
+			#nav ul.links {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			
+			#nav ul.links li {
+				margin: 0;
+			}
+			
+			#nav ul.links li a {
+				text-decoration: none;
+				color: #ffffff;
+				padding: 1em;
+				transition: background-color 0.3s ease;
+			}
+			
+			#nav ul.links li a:hover {
+				background-color: rgba(255, 255, 255, 0.1);
+				border-radius: 4px;
+			}
+			
+			#nav ul.links li.active a {
+				background-color: rgba(255, 255, 255, 0.2);
+				border-radius: 4px;
+				position: relative;
+			}
+			
+			#nav ul.links li.active a::before {
+				content: '';
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+				width: 100%;
+				height: 5px;
+				background-color: rgba(255, 255, 255, 0.2);
+				border-radius: 4px 4px 0 0;
+			}
+			
+			#nav ul.links li a {
+				text-decoration: none;
+				color: #ffffff;
+				padding: 1em;
+				transition: background-color 0.3s ease;
+				position: relative;
+				font-size: 30px; /* Adjust the font size as needed */
+			}
+
+			#nav ul.links {
+				display: flex;
+				justify-content: space-around; /* Distribute tabs evenly */
+				width: 100%; /* Make tabs cover the entire width */
+			}
+	
+			#nav ul.links li {
+				flex: 1; /* Distribute equal width to all tabs */
+			}
+	
+			#nav ul.links li a {
+				display: block;
+				padding: 10px 0; /* Adjust vertical padding as needed */
+				text-align: center;
+				font-size: 18px; /* Adjust font size as needed */
+			}
+		</style>
 	</head>
 
 	
@@ -39,11 +109,11 @@
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li class="active"><a href="index.html">Python Projects</a></li>
-							<li><a href="index_R.html">R Projects</a></li>
-							<li><a href="index_SQL.html">SQL Projects</a></li>
-							<li><a href="index_SAS.html">SAS Projects</a></li>
-							<li><a href="index_tableau.html">Tableau Projects</a></li>
+							<li class="active"><a href="index.html">Python</a></li>
+							<li><a href="index_R.html">R</a></li>
+							<li><a href="index_SQL.html">SQL</a></li>
+							<li><a href="index_SAS.html">SAS</a></li>
+							<li><a href="index_tableau.html">Tableau</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/dahami" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
@@ -111,7 +181,7 @@
 									<a href="https://github.com/Dahamey/Dahamey.github.io/blob/main/Fashion_Items_Classification_with_Neural_Networks.ipynb.ipynb" class="image fit"><img src="images/articles.png" alt="" /></a>
 									<p>In this project we created and used a neural network to classify articles of clothing.</p>
 									<ul class="actions special">
-										<li><a href="https://github.com/Dahamey/Dahamey.github.io/blob/main/Fashion_Items_Classification_with_Neural_Networks.ipynb.ipynb" class="button">View Project</a></li>
+										<li><a href="https://github.com/Dahamey/Dahamey.github.io/blob/main/Fashion_Items_Classification_with_Neural_Networks.ipynb.ipynb" class="button">View </a></li>
 									</ul>
 								</article>
 
@@ -152,9 +222,9 @@
 										</a></h2>
 									</header>
 									<a href="https://github.com/Dahamey/Hypothesis-Testing/blob/main/Python/Hypothesis%20Tests%20in%20Python.py" class="image fit"><img src="images/HT.webp" alt="" /></a>
-									<p>In this project we demonstrate formal hypothesis testing using the NHANES data.</p>
+									<p>We demonstrate formal hypothesis testing using the NHANES data.</p>
 									<ul class="actions special">
-										<li><a href="https://github.com/Dahamey/Hypothesis-Testing/blob/main/Python/Hypothesis%20Tests%20in%20Python.py" class="button">View Project</a></li>
+										<li><a href="https://github.com/Dahamey/Hypothesis-Testing/blob/main/Python/Hypothesis%20Tests%20in%20Python.py" class="button">View code</a></li>
 									</ul>
 								</article>
 
@@ -183,7 +253,7 @@
 									<a href="https://github.com/Dahamey/Dahamey.github.io/blob/main/Reinforcement_Learning_Q_Learning.ipynb" class="image fit"><img src="images/qlearning.png" alt="" /></a>
 									<p>Q-learning is a reinforcement learning algorithm to learn the value of an action in a particular state.</p>
 									<ul class="actions special">
-										<li><a href="https://github.com/Dahamey/Dahamey.github.io/blob/main/Reinforcement_Learning_Q_Learning.ipynb" class="button">View Project</a></li>
+										<li><a href="https://github.com/Dahamey/Dahamey.github.io/blob/main/Reinforcement_Learning_Q_Learning.ipynb" class="button">View Code</a></li>
 									</ul>
 								</article>
 
@@ -195,7 +265,7 @@
 										</a></h2>
 									</header>
 									<a href="https://github.com/Dahamey/Dahamey.github.io/blob/main/Python%20-%20Detecting%20Spam%20in%20Emails%20with%20LSTM.ipynb" class="image fit"><img src="images/spam or ham.png" alt="" /></a>
-									<p> In this notebook, my goal is to explore and understand the process of classifying email as spam or legitimate. This is a classic binary classification problem. There are real-world problem can be solved by this method such as by detecting unsocilicited and unwanted emails, we can't prevent harmful and spam message from anonymous users (such as in gmail).</p>
+									<p> In this project, my goal is to explore and understand the process of classifying email as spam or legitimate. This is a classic binary classification problem. There are real-world problem can be solved by this method such as by detecting unsocilicited and unwanted emails, we can't prevent harmful and spam message from anonymous users (such as in gmail).</p>
 									<ul class="actions special">
 										<li><a href="https://github.com/Dahamey/Dahamey.github.io/blob/main/Python%20-%20Detecting%20Spam%20in%20Emails%20with%20LSTM.ipynb" class="button">View Projects</a></li>
 									</ul>
@@ -218,7 +288,7 @@
 									<a href="https://github.com/Dahamey/Factorial-Methods-of-Representation-and-Discrimination/blob/main/PCA_digits/Principal%20Component%20Analysis%20(PCA).ipynb" class="image fit"><img src="images/pca.png" alt="" /></a>
 									<p>Principal Component Analysis (PCA) is a powerful dimensionality reduction technique widely used in various fields to identify patterns and reduce the number of features in a dataset while retaining essential information. My project delves into explaining and implementing PCA, showcasing its applications in machine learning, and image processing.</p>
 									<ul class="actions special">
-										<li><a href="https://github.com/Dahamey/Factorial-Methods-of-Representation-and-Discrimination/blob/main/PCA_digits/Principal%20Component%20Analysis%20(PCA).ipynb" class="button">View Project</a></li>
+										<li><a href="https://github.com/Dahamey/Factorial-Methods-of-Representation-and-Discrimination/blob/main/PCA_digits/Principal%20Component%20Analysis%20(PCA).ipynb" class="button">View Code</a></li>
 									</ul>
 								</article>
 
